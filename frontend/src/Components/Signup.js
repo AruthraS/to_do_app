@@ -39,7 +39,7 @@ const Signup = () => {
                     if (res.data === 'valid') { setEmailerr(''); }
                     else { setEmailerr('Email aldready exists'); }
                 })
-                .catch(err => { setError('Internal Server error'); })
+                .catch(err => { console.log(err);setError('Internal Server error'); })
         }
     };
     const validateUsername = () => {
@@ -54,7 +54,7 @@ const Signup = () => {
                     if (res.data === 'valid') { setUsererr(''); }
                     else { setUsererr('Username aldready exists'); }
                 })
-                .catch(err => { setError('Internal Server error'); })
+                .catch(err => { console.log(err);setError('Internal Server error'); })
         }
 
     };
